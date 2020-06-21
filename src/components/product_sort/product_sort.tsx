@@ -1,18 +1,26 @@
-import * as React from 'react';
-import { CategorySort } from '../../store/category/types';
-import CategorySortItem from './category_sort_item';
+import React, { useState } from 'react';
+import { ProductSort } from '../../store/product_sort/types';
+import ProductSortItem from './product_sort_item';
 
-interface CategorySortListProps {
-  categorySortItems: CategorySort[];
-  selectSort: (categoryId: number) => void;
-  activeSort: number;
+interface ProductSortListProps {
+  items: ProductSort[];
+  selectSort: (sortKey: string) => void;
+  activeSort: ProductSort;
 }
 
-const CategorySortList: React.FunctionComponent<CategorySortListProps> = ({
-  categorySortItems,
+const ProductSortList: React.FunctionComponent<ProductSortListProps> = ({
+  items,
   selectSort,
   activeSort,
-}: CategorySortListProps) => {
+}: ProductSortListProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const sortIsOpenClassName = isOpen ? 'active' : '';
+
+  function selectSortItem(sortKey: string) {
+    setIsOpen(!isOpen);
+    selectSort(sortKey);
+  }
+
   return (
     <div className="sort">
       <div className="sort__label">
@@ -29,15 +37,16 @@ const CategorySortList: React.FunctionComponent<CategorySortListProps> = ({
           />
         </svg>
         <b>Сортировка по:</b>
-        <span>популярности</span>
+        <span onClick={() => setIsOpen(!isOpen)}>{activeSort.value}</span>
       </div>
-      <div className="sort__popup">
+      <div className={`sort__popup  ${sortIsOpenClassName}`}>
         <ul>
-          {categorySortItems.map(sort => (
-            <CategorySortItem
+          {items.map(sort => (
+            <ProductSortItem
+              key={sort.key}
               sort={sort}
               activeSort={activeSort}
-              selectSort={selectSort}
+              selectSort={selectSortItem}
             />
           ))}
         </ul>
@@ -46,4 +55,4 @@ const CategorySortList: React.FunctionComponent<CategorySortListProps> = ({
   );
 };
 
-export default CategorySortList;
+export default ProductSortList;

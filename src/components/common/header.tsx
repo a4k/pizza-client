@@ -1,12 +1,10 @@
 import React from 'react';
-import * as svgLogo from '../../assets/img/pizza-logo.svg';
 
 export const Header: React.FunctionComponent = () => {
   return (
     <div className="header">
       <div className="container">
         <div className="header__logo">
-          <img width="38" src={svgLogo} alt="Pizza logo" />
           <div>
             <h1>Innoscripta Pizza</h1>
             <p>the most delicious pizza</p>

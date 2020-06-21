@@ -2,6 +2,8 @@ import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import React from 'react';
 import ReactDOM from 'react-dom';
+// eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+// @ts-ignore
 import { Provider } from 'react-redux';
 import configureStore from './store';
 

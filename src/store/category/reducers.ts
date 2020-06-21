@@ -1,13 +1,13 @@
 import {
   CategoriesState,
   SEND_CATEGORY,
-  DELETE_CATEGORY,
+  SELECT_CATEGORY,
   CategoriesActionTypes,
 } from './types';
 
 const initialState: CategoriesState = {
-  categories: [],
-  categorySortItems: [],
+  items: [],
+  activeCategory: { id: 0, title: '', timestamp: 0 },
 };
 
 export function categoryReducer(
@@ -17,15 +17,13 @@ export function categoryReducer(
   switch (action.type) {
     case SEND_CATEGORY:
       return {
-        categories: [...state.categories, action.payload],
-        categorySortItems: state.categorySortItems,
+        items: [...state.items, action.payload],
+        activeCategory: state.activeCategory,
       };
-    case DELETE_CATEGORY:
+    case SELECT_CATEGORY:
       return {
-        categories: state.categories.filter(
-          category => category.timestamp !== action.meta.timestamp
-        ),
-        categorySortItems: state.categorySortItems,
+        items: state.items,
+        activeCategory: action.payload,
       };
     default:
       return state;

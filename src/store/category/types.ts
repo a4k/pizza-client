@@ -1,32 +1,24 @@
 export interface Category {
   id: number;
   title: string;
-  children?: Category[];
   timestamp: number;
-}
-export interface CategorySort {
-  id: number;
-  title: string;
 }
 
 export interface CategoriesState {
-  categories: Category[];
-  categorySortItems: CategorySort[];
+  items: Category[];
+  activeCategory: Category;
 }
 
 export const SEND_CATEGORY = 'SEND_CATEGORY';
-export const DELETE_CATEGORY = 'DELETE_CATEGORY';
+export const SELECT_CATEGORY = 'SELECT_CATEGORY';
 
 interface SendCategoryAction {
   type: typeof SEND_CATEGORY;
   payload: Category;
 }
-
-interface DeleteCategoryAction {
-  type: typeof DELETE_CATEGORY;
-  meta: {
-    timestamp: number;
-  };
+interface SelectCategoryAction {
+  type: typeof SELECT_CATEGORY;
+  payload: Category;
 }
 
-export type CategoriesActionTypes = SendCategoryAction | DeleteCategoryAction;
+export type CategoriesActionTypes = SendCategoryAction | SelectCategoryAction;

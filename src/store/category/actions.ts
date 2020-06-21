@@ -1,4 +1,4 @@
-import { Category, SEND_CATEGORY, DELETE_CATEGORY } from './types';
+import { Category, SEND_CATEGORY, SELECT_CATEGORY } from './types';
 
 export function sendCategory(newCategory: Category) {
   return {
@@ -6,12 +6,9 @@ export function sendCategory(newCategory: Category) {
     payload: newCategory,
   };
 }
-
-export function deleteCategory(timestamp: number) {
+export function selectCategory(newCategory: Category) {
   return {
-    type: DELETE_CATEGORY,
-    meta: {
-      timestamp,
-    },
+    type: SELECT_CATEGORY,
+    payload: newCategory,
   };
 }

@@ -5,15 +5,14 @@
 @import 'components/all';
 
 body {
-  background-color: $background;
+  background-color: #fff;
 }
 
 .wrapper {
   width: calc(100vw - 100px);
   height: 100%;
   background-color: #fff;
-  margin: 50px auto;
-  border-radius: 10px;
+  margin: 0 auto 50px;
   max-width: 1400px;
 }
 
