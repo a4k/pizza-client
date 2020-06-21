@@ -1,0 +1,88 @@
+{
+  "parser": "babel-eslint",
+  "plugins": ["import", "prettier", "@typescript-eslint", "jsx-a11y", "react", "react-hooks", "jest"],
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "ecmaFeatures": {
+      "legacyDecorators": true
+    }
+  },
+  "extends": [ "airbnb", "prettier", "plugin:@typescript-eslint/recommended", "prettier/@typescript-eslint", "plugin:jest/recommended"],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "globals": {},
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+
+  "rules": {
+    "react/require-default-props": 0,
+    "react/default-props-match-prop-types": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "class-methods-use-this": 0,
+    "import/no-named-as-default": 0,
+    "react/no-find-dom-node": 0,
+    "react/no-render-return-value": 0,
+    "import/prefer-default-export": 0,
+    "import/no-extraneous-dependencies": [
+      "error",
+      { "devDependencies": ["./config/", "./scripts/"] }
+    ],
+    "linebreak-style": 0,
+    "react/forbid-prop-types": [2, { "forbid": ["object"] }],
+    "prefer-const": 0,
+    "func-names": 0,
+    "default-case": 0,
+    "prefer-template": 0,
+    "no-param-reassign": 0,
+    "no-nested-ternary": 0,
+    "prefer-rest-params": 0,
+    "no-unused-expressions": 0,
+    "no-extend-native": 0,
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["to", "url", "hrefLeft", "hrefRight"],
+        "aspects": ["noHref", "invalidHref", "preferButton"]
+      }
+    ],
+    "no-shadow": 0,
+    "max-len": ["error", 120, 2, { "ignoreComments": true }],
+    "prefer-arrow-callback": 0,
+    "react/prefer-stateless-function": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/jsx-indent-props": [2, 2],
+    "react/jsx-indent": [2, 2],
+    "react/jsx-boolean-value": ["error", "always"],
+    "react/jsx-wrap-multilines": 0,
+    "react/button-has-type": 0,
+    "react/jsx-filename-extension": [1, {
+      "extensions": [".jsx", ".tsx"]
+    }],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "valid-jsdoc": [
+      "error",
+      {
+        "requireReturn": false,
+        "requireReturnDescription": false
+      }
+    ],
+    "prettier/prettier": "error",
+    "@typescript-eslint/prefer-interface": 0,
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error"
+  }
+}
