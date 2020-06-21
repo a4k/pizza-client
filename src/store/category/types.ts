@@ -1,16 +1,19 @@
-// Describing the shape of the category's slice of state
 export interface Category {
   id: number;
   title: string;
   children?: Category[];
   timestamp: number;
 }
+export interface CategorySort {
+  id: number;
+  title: string;
+}
 
 export interface CategoriesState {
   categories: Category[];
+  categorySortItems: CategorySort[];
 }
 
-// Describing the different ACTION NAMES available
 export const SEND_CATEGORY = 'SEND_CATEGORY';
 export const DELETE_CATEGORY = 'DELETE_CATEGORY';
 

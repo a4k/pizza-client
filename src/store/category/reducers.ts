@@ -7,6 +7,7 @@ import {
 
 const initialState: CategoriesState = {
   categories: [],
+  categorySortItems: [],
 };
 
 export function categoryReducer(
@@ -17,12 +18,14 @@ export function categoryReducer(
     case SEND_CATEGORY:
       return {
         categories: [...state.categories, action.payload],
+        categorySortItems: state.categorySortItems,
       };
     case DELETE_CATEGORY:
       return {
         categories: state.categories.filter(
           category => category.timestamp !== action.meta.timestamp
         ),
+        categorySortItems: state.categorySortItems,
       };
     default:
       return state;
