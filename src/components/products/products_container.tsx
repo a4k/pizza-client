@@ -61,7 +61,7 @@ class ProductsContainer extends React.Component<ProductsContainerProps> {
         <div className="content__top">
           <CategoryList
             activeCategory={props.category.activeCategory}
-            categories={props.category.items}
+            items={props.category.items}
             selectCategory={this.selectCategory}
           />
           <ProductSortList

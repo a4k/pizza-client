@@ -3,20 +3,20 @@ import { Category } from '../../store/category/types';
 import CategoryItem from './category_item';
 
 interface CategoryListProps {
-  categories: Category[];
+  items: Category[];
   selectCategory: (categoryId: number) => void;
   activeCategory: Category;
 }
 
 const CategoryList: React.FunctionComponent<CategoryListProps> = ({
-  categories,
+  items,
   selectCategory,
   activeCategory,
 }: CategoryListProps) => {
   return (
     <div className="categories">
       <ul>
-        {categories.map(category => (
+        {items.map(category => (
           <CategoryItem
             key={category.id}
             category={category}

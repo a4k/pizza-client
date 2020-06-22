@@ -1,14 +1,15 @@
-export interface ProductFilter {
+export interface ProductSize {
+  id: number;
   title: string;
-  level: number;
+  size: number;
   price: number;
-  children: ProductFilter[];
 }
 
 export interface Product {
   id: number;
   title: string;
   image: string;
+  size: ProductSize[];
 }
 
 export interface ProductState {

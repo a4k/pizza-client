@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { Product } from '../../store/product/types';
 
 interface ProductItemProps {
@@ -8,6 +8,7 @@ interface ProductItemProps {
 const ProductItem: React.FunctionComponent<ProductItemProps> = ({
   item,
 }: ProductItemProps) => {
+  const [activeSize, setActiveSize] = useState(item.size[0]);
   return (
     <div className="pizza-block">
       <img
@@ -18,17 +19,19 @@ const ProductItem: React.FunctionComponent<ProductItemProps> = ({
       <h4 className="pizza-block__title">{item.title}</h4>
       <div className="pizza-block__selector">
         <ul>
-          <li className="active">тонкое</li>
-          <li>традиционное</li>
-        </ul>
-        <ul>
-          <li className="active">26 см.</li>
-          <li>30 см.</li>
-          <li>40 см.</li>
+          {item.size.map(sizeItem => (
+            <li
+              key={sizeItem.id}
+              className={sizeItem.id === activeSize.id ? 'active' : ''}
+              onClick={() => setActiveSize(sizeItem)}
+            >
+              {sizeItem.title}
+            </li>
+          ))}
         </ul>
       </div>
       <div className="pizza-block__bottom">
-        <div className="pizza-block__price">от 395 ₽</div>
+        <div className="pizza-block__price">{activeSize.price} ₽</div>
         <div className="button button--outline button--add">
           <svg
             width="12"

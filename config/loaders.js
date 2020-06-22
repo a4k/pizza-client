@@ -92,7 +92,7 @@ const getImagesLoader = (isProduction, folder = '') =>
         use: [
           {
             loader: 'file-loader',
-            options: { name: `${folder}/media/[name].[hash:8].[ext]` },
+            options: { name: `[name].[hash:8].[ext]`, outputPath: 'img/' },
           },
           {
             loader: 'image-webpack-loader',
@@ -119,7 +119,7 @@ const getImagesLoader = (isProduction, folder = '') =>
         use: {
           loader: 'file-loader',
           options: {
-            name: `${folder}/media/[name].[hash:8].[ext]`,
+            name: `[name].[hash:8].[ext]`,
           },
         },
       };
@@ -131,7 +131,7 @@ const getSVGLoader = (isProduction, folder = '') =>
         use: [
           {
             loader: 'svg-sprite-loader',
-            options: { name: `${folder}/media/[name].[hash:8].[ext]` },
+            options: { name: `[name].[hash:8].[ext]`, outputPath: 'img/' },
           },
           {
             loader: 'image-webpack-loader',
@@ -152,7 +152,8 @@ const getSVGLoader = (isProduction, folder = '') =>
         use: {
           loader: 'svg-sprite-loader',
           options: {
-            name: `${folder}/media/[name].[hash:8].[ext]`,
+            name: `[name].[hash:8].[ext]`,
+            outputPath: 'img/',
           },
         },
       };

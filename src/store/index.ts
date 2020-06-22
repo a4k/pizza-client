@@ -8,12 +8,14 @@ import { systemReducer } from './system/reducers';
 import { categoryReducer } from './category/reducers';
 import { productSortReducer } from './product_sort/reducers';
 import { productReducer } from './product/reducers';
+import { cartReducer } from './cart/reducers';
 
 const rootReducer = combineReducers({
   system: systemReducer,
   category: categoryReducer,
   productSort: productSortReducer,
   product: productReducer,
+  cart: cartReducer,
 });
 
 // eslint-disable-next-line no-undef
