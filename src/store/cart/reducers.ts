@@ -1,4 +1,4 @@
-import { CartState, SEND_CART_PRODUCT, CartActionTypes } from './types';
+import { CartState, ADD_PRODUCT_TO_CART, CartActionTypes } from './types';
 
 const initItems = [
   {
@@ -18,7 +18,7 @@ export function cartReducer(
 ): CartState {
   let isFound = false;
   switch (action.type) {
-    case SEND_CART_PRODUCT:
+    case ADD_PRODUCT_TO_CART:
       return {
         items: Object.assign(
           [],

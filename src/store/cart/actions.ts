@@ -1,12 +1,8 @@
-import { SEND_CART_PRODUCT } from './types';
+import { ADD_PRODUCT_TO_CART } from './types';
 
-export function sendCartProduct(
-  product: number,
-  size: number,
-  price: number
-) {
+export function addProductToCart(product: number, size: number, price: number) {
   return {
-    type: SEND_CART_PRODUCT,
+    type: ADD_PRODUCT_TO_CART,
     product,
     size,
     price,

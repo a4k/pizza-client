@@ -1,7 +1,6 @@
 export interface Category {
   id: number;
   title: string;
-  timestamp: number;
 }
 
 export interface CategoriesState {

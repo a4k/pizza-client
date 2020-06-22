@@ -1,5 +1,3 @@
-import { Product, ProductSize } from '../product/types';
-
 export interface CartProduct {
   product: number;
   quantity: number;
@@ -11,10 +9,10 @@ export interface CartState {
   items: CartProduct[];
 }
 
-export const SEND_CART_PRODUCT = 'SEND_CART_PRODUCT';
+export const ADD_PRODUCT_TO_CART = 'ADD_PRODUCT_TO_CART';
 
 interface SendCartProductAction {
-  type: typeof SEND_CART_PRODUCT;
+  type: typeof ADD_PRODUCT_TO_CART;
   product: number;
   size: number;
   price: number;

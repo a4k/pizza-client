@@ -4,6 +4,7 @@ import ProductItem from './product_item';
 
 interface ProductListProps {
   items: Product[];
+  selectProduct: (product: number, size: number, price: number) => void;
 }
 
 const ProductList: React.FunctionComponent<ProductListProps> = ({

@@ -12,7 +12,8 @@ import CategoryList from '../category/category_list';
 import ProductSortList from '../product_sort/product_sort';
 import ProductList from './product_list';
 import { ProductState } from '../../store/product/types';
-import { sendProduct } from '../../store/product/actions';
+import { CartState } from '../../store/cart/types';
+import { addProductToCart } from '../../store/cart/actions';
 
 interface ProductsContainerProps {
   sendCategory: typeof sendCategory;
@@ -22,7 +23,8 @@ interface ProductsContainerProps {
   productSort: ProductSortState;
   selectProductSort: typeof selectProductSort;
   product: ProductState;
-  sendProduct: typeof sendProduct;
+  cart: CartState;
+  addProductToCart: typeof addProductToCart;
 }
 
 class ProductsContainer extends React.Component<ProductsContainerProps> {
@@ -31,9 +33,7 @@ class ProductsContainer extends React.Component<ProductsContainerProps> {
     props.sendCategory({
       id: 1,
       title: 'Chat Bot',
-      timestamp: new Date().getTime(),
     });
-
     props.thunkSendCategory('test');
   }
 
@@ -53,6 +53,11 @@ class ProductsContainer extends React.Component<ProductsContainerProps> {
     props.selectProductSort(sortItem[0]);
   };
 
+  selectProduct = (product: number, size: number, price: number) => {
+    let { props } = this;
+    props.addProductToCart(product, size, price);
+  };
+
   render() {
     let { props } = this;
 
@@ -70,7 +75,10 @@ class ProductsContainer extends React.Component<ProductsContainerProps> {
             selectSort={this.selectSort}
           />
         </div>
-        <ProductList items={props.product.items} />
+        <ProductList
+          items={props.product.items}
+          selectProduct={this.selectProduct}
+        />
       </div>
     );
   }
@@ -81,6 +89,7 @@ const mapStateToProps = (state: AppState) => {
     product: state.product,
     category: state.category,
     productSort: state.productSort,
+    cart: state.cart,
   };
 };
 
@@ -89,8 +98,8 @@ export default connect(
   {
     sendCategory,
     selectCategory,
-    sendProduct,
     thunkSendCategory,
     selectProductSort,
+    addProductToCart,
   }
 )(ProductsContainer);

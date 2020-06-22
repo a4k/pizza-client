@@ -15,7 +15,6 @@ export const thunkSendCategory = (
     sendCategory({
       id: asyncResp,
       title: category,
-      timestamp: new Date().getTime(),
     })
   );
 };
