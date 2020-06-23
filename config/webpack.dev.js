@@ -15,6 +15,10 @@ const config = {
     filename: './assets/js/bundle.js',
     chunkFilename: './assets/js/[name].chunk.js',
   },
+  devServer: {
+    contentBase: __dirname + '/dist',
+    // contentBase: 'dist'
+  },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
     modules: [path.resolve(process.cwd(), 'src'), 'node_modules'],

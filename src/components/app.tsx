@@ -10,7 +10,7 @@ import { updateSession } from '../store/system/actions';
 
 import { Header } from './common/header';
 import ProductsContainer from './products/products_container';
-import CartContainer from "./cart/cart_container";
+import CartContainer from './cart/cart_container';
 
 interface AppProps {
   updateSession: typeof updateSession;
@@ -33,7 +33,7 @@ class App extends React.Component<AppProps> {
         <div>
           <Header />
           <Switch>
-            <Route path="/films">
+            <Route path="/cart">
               <CartContainer />
             </Route>
             <Route path="/">
