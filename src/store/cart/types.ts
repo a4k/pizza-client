@@ -1,6 +1,5 @@
 export interface CartProduct {
   product: number;
-  quantity: number;
   size: number;
   price: number;
 }
@@ -11,11 +10,11 @@ export interface CartState {
 
 export const ADD_PRODUCT_TO_CART = 'ADD_PRODUCT_TO_CART';
 
-interface SendCartProductAction {
+interface AddProductToCartAction {
   type: typeof ADD_PRODUCT_TO_CART;
   product: number;
   size: number;
   price: number;
 }
 
-export type CartActionTypes = SendCartProductAction;
+export type CartActionTypes = AddProductToCartAction;

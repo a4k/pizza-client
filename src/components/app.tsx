@@ -1,6 +1,7 @@
 import React from 'react';
 // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
 // @ts-ignore
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { AppState } from '../store';
 
@@ -9,6 +10,7 @@ import { updateSession } from '../store/system/actions';
 
 import { Header } from './common/header';
 import ProductsContainer from './products/products_container';
+import CartContainer from "./cart/cart_container";
 
 interface AppProps {
   updateSession: typeof updateSession;
@@ -27,12 +29,19 @@ class App extends React.Component<AppProps> {
 
   render() {
     return (
-      <div className="wrapper">
-        <Header />
-        <div className="content">
-          <ProductsContainer />
+      <Router>
+        <div>
+          <Header />
+          <Switch>
+            <Route path="/films">
+              <CartContainer />
+            </Route>
+            <Route path="/">
+              <ProductsContainer {...this.props} />
+            </Route>
+          </Switch>
         </div>
-      </div>
+      </Router>
     );
   }
 }

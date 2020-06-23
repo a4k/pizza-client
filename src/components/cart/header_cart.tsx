@@ -16,7 +16,7 @@ const HeaderCart: React.FunctionComponent<HeaderCartProps> = ({
 }: HeaderCartProps) => {
   return (
     <div className="header__cart">
-      <a href="/cart.html" className="button button--cart">
+      <a href="/cart" className="button button--cart">
         <span>{totalPrice} ₽</span>
         <div className="button__delimiter" />
         <svg
@@ -54,11 +54,10 @@ const HeaderCart: React.FunctionComponent<HeaderCartProps> = ({
   );
 };
 const mapStateToProps = (state: AppState) => {
-  let quantity = 0;
+  let quantity = state.cart.items.length;
   let totalPrice = 0;
   state.cart.items.map(product => {
-    quantity += product.quantity;
-    totalPrice += (product.quantity * product.price);
+    totalPrice += product.price;
     return product;
   });
   return {

@@ -53,7 +53,7 @@ class ProductsContainer extends React.Component<ProductsContainerProps> {
     props.selectProductSort(sortItem[0]);
   };
 
-  selectProduct = (product: number, size: number, price: number) => {
+  addToCart = (product: number, size: number, price: number) => {
     let { props } = this;
     props.addProductToCart(product, size, price);
   };
@@ -77,7 +77,8 @@ class ProductsContainer extends React.Component<ProductsContainerProps> {
         </div>
         <ProductList
           items={props.product.items}
-          selectProduct={this.selectProduct}
+          cart={props.cart.items}
+          addToCart={this.addToCart}
         />
       </div>
     );

@@ -1,14 +1,28 @@
 import React, { useState } from 'react';
 import { Product } from '../../store/product/types';
+import { CartProduct } from '../../store/cart/types';
 
 interface ProductItemProps {
   item: Product;
+  cart: CartProduct[];
+  addToCart: (product: number, size: number, price: number) => void;
 }
 
 const ProductItem: React.FunctionComponent<ProductItemProps> = ({
   item,
+  cart,
+  addToCart,
 }: ProductItemProps) => {
   const [activeSize, setActiveSize] = useState(item.size[0]);
+
+  let countOfProduct = 0;
+  cart.map(cartItem => {
+    if (cartItem.product === item.id && cartItem.size === activeSize.id) {
+      countOfProduct += 1;
+    }
+    return item;
+  });
+
   return (
     <div className="pizza-block">
       <img
@@ -32,7 +46,10 @@ const ProductItem: React.FunctionComponent<ProductItemProps> = ({
       </div>
       <div className="pizza-block__bottom">
         <div className="pizza-block__price">{activeSize.price} ₽</div>
-        <div className="button button--outline button--add">
+        <div
+          className="button button--outline button--add"
+          onClick={() => addToCart(item.id, activeSize.id, activeSize.price)}
+        >
           <svg
             width="12"
             height="12"
@@ -46,7 +63,7 @@ const ProductItem: React.FunctionComponent<ProductItemProps> = ({
             />
           </svg>
           <span>Добавить</span>
-          <i>2</i>
+          <i>{countOfProduct}</i>
         </div>
       </div>
     </div>

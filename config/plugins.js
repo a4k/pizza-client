@@ -9,11 +9,12 @@ const getHtmlWebpackPlugin = () =>
     template: path.resolve(process.cwd(), 'src/index.html'),
   });
 
-const getMiniCssExtractPlugin = folder =>
-  new MiniCssExtractPlugin({
+const getMiniCssExtractPlugin = folder => {
+  return new MiniCssExtractPlugin({
     filename: `${folder}/css/[name].[contenthash:8].css`,
     chunkFilename: `${folder}/css/[name].[contenthash:8].chunk.css`,
   });
+}
 
 const getPlugins = ({ folder } = {}) => {
   const env = process.env.NODE_ENV;
