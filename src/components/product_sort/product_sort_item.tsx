@@ -4,7 +4,7 @@ import { ProductSort } from '../../store/product_sort/types';
 interface ProductSortItemProps {
   sort: ProductSort;
   selectSort: (sortKey: string) => void;
-  activeSort: ProductSort;
+  activeSort: string;
 }
 
 const ProductSortItem: React.FunctionComponent<ProductSortItemProps> = ({
@@ -12,7 +12,7 @@ const ProductSortItem: React.FunctionComponent<ProductSortItemProps> = ({
   selectSort,
   activeSort,
 }: ProductSortItemProps) => {
-  const activeClass = activeSort.key === sort.key ? 'active' : '';
+  const activeClass = activeSort === sort.key ? 'active' : '';
   return (
     <li
       className={activeClass}

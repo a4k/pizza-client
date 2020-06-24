@@ -31,6 +31,7 @@ const ProductItem: React.FunctionComponent<ProductItemProps> = ({
         alt="Pizza"
       />
       <h4 className="pizza-block__title">{item.title}</h4>
+      <div className="pizza-block__description">{item.description}</div>
       <div className="pizza-block__selector">
         <ul>
           {item.size.map(sizeItem => (

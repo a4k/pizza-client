@@ -1,7 +1,7 @@
 import React from 'react';
 // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
 // @ts-ignore
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { AppState } from '../store';
 

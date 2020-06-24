@@ -1,7 +1,6 @@
 import {
   ProductSortState,
   SEND_PRODUCT_SORT,
-  SELECT_PRODUCT_SORT,
   ProductSortActionTypes,
 } from './types';
 
@@ -12,7 +11,6 @@ const initItems = [
 ];
 const initialState: ProductSortState = {
   items: initItems,
-  activeItem: initItems[0],
 };
 
 export function productSortReducer(
@@ -23,12 +21,6 @@ export function productSortReducer(
     case SEND_PRODUCT_SORT:
       return {
         items: [...state.items, action.payload],
-        activeItem: state.activeItem,
-      };
-    case SELECT_PRODUCT_SORT:
-      return {
-        items: state.items,
-        activeItem: action.payload,
       };
     default:
       return state;

@@ -5,7 +5,7 @@ import ProductSortItem from './product_sort_item';
 interface ProductSortListProps {
   items: ProductSort[];
   selectSort: (sortKey: string) => void;
-  activeSort: ProductSort;
+  activeSort: string;
 }
 
 const ProductSortList: React.FunctionComponent<ProductSortListProps> = ({
@@ -15,6 +15,13 @@ const ProductSortList: React.FunctionComponent<ProductSortListProps> = ({
 }: ProductSortListProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const sortIsOpenClassName = isOpen ? 'active' : '';
+  let itemActiveSort: ProductSort = { key: '', value: '' };
+  items.map(item => {
+    if (item.key === activeSort) {
+      itemActiveSort = item;
+    }
+    return item;
+  });
 
   function selectSortItem(sortKey: string) {
     setIsOpen(!isOpen);
@@ -37,7 +44,7 @@ const ProductSortList: React.FunctionComponent<ProductSortListProps> = ({
           />
         </svg>
         <b>Сортировка по:</b>
-        <span onClick={() => setIsOpen(!isOpen)}>{activeSort.value}</span>
+        <span onClick={() => setIsOpen(!isOpen)}>{itemActiveSort.value}</span>
       </div>
       <div className={`sort__popup  ${sortIsOpenClassName}`}>
         <ul>

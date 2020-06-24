@@ -1,11 +1,20 @@
 import * as React from 'react';
 
 export interface ButtonProps {
+  onClick?: void;
+  className?: string;
   outline?: boolean;
   children: React.ReactNode;
 }
 
-export function Button({ children, outline = false }: ButtonProps) {
-  let className = outline ? 'button--outline' : '';
-  return <button className={`button ${className}`}>{children}</button>;
+export function Button({
+  onClick,
+  className,
+  children,
+  outline = false,
+}: ButtonProps) {
+  let arClass = [];
+  arClass.push(outline ? 'button--outline' : '');
+  arClass.push(className);
+  return <button className={`button ${arClass.join(' ')}`}>{children}</button>;
 }
