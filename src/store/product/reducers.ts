@@ -1,4 +1,9 @@
-import { ProductState, SEND_PRODUCT, ProductActionTypes } from './types';
+import {
+  ProductState,
+  SEND_PRODUCT,
+  ProductActionTypes,
+  RECEIVE_PRODUCTS,
+} from './types';
 
 const initItems = [
   {
@@ -26,6 +31,11 @@ export function productReducer(
     case SEND_PRODUCT:
       return {
         items: [...state.items, action.payload],
+      };
+    case RECEIVE_PRODUCTS:
+      return {
+        ...state,
+        items: action.products,
       };
     default:
       return state;

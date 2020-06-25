@@ -101,6 +101,10 @@
       width: 13%;
 
       &-minus {
+        cursor: pointer;
+        text-align: center;
+        width: 24px;
+        height: 24px;
         svg {
           path:first-of-type {
             display: none;
@@ -109,6 +113,10 @@
       }
 
       &-plus {
+        cursor: pointer;
+        text-align: center;
+        width: 24px;
+        height: 24px;
         svg {
           path:first-of-type {
             display: none;
@@ -197,6 +205,7 @@
         align-items: center;
         justify-content: center;
         width: 210px;
+        height: 100%;
 
         border-color: darken($color: $gray-line, $amount: 10);
 
@@ -240,7 +249,7 @@
 
     h2 {
       font-size: 32px;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
 
     p {
@@ -248,6 +257,10 @@
       line-height: 145.4%;
       letter-spacing: 0.01em;
       color: #777777;
+    }
+
+    &__info {
+      margin-bottom: 30px;
     }
 
     icon {

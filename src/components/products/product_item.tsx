@@ -5,7 +5,7 @@ import { CartProduct } from '../../store/cart/types';
 interface ProductItemProps {
   item: Product;
   cart: CartProduct[];
-  addToCart: (product: number, size: number, price: number) => void;
+  addToCart: (product: number, size: number) => void;
 }
 
 const ProductItem: React.FunctionComponent<ProductItemProps> = ({
@@ -16,12 +16,12 @@ const ProductItem: React.FunctionComponent<ProductItemProps> = ({
   const [activeSize, setActiveSize] = useState(item.size[0]);
 
   let countOfProduct = 0;
-  cart.map(cartItem => {
-    if (cartItem.product === item.id && cartItem.size === activeSize.id) {
-      countOfProduct += 1;
-    }
-    return item;
-  });
+  const activeCartItem = cart.find(
+    cartItem => cartItem.product === item.id && cartItem.size === activeSize.id
+  );
+  if (activeCartItem) {
+    countOfProduct = activeCartItem.quantity;
+  }
 
   return (
     <div className="pizza-block">
@@ -49,7 +49,7 @@ const ProductItem: React.FunctionComponent<ProductItemProps> = ({
         <div className="pizza-block__price">{activeSize.price} ₽</div>
         <div
           className="button button--outline button--add"
-          onClick={() => addToCart(item.id, activeSize.id, activeSize.price)}
+          onClick={() => addToCart(item.id, activeSize.id)}
         >
           <svg
             width="12"

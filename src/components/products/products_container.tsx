@@ -11,7 +11,7 @@ import ProductSortList from '../product_sort/product_sort';
 import ProductList from './product_list';
 import { ProductState } from '../../store/product/types';
 import { CartState } from '../../store/cart/types';
-import { addProductToCart } from '../../store/cart/actions';
+import { addToCart } from '../../store/cart/actions';
 
 interface ProductsContainerProps {
   sendCategory: typeof sendCategory;
@@ -19,7 +19,7 @@ interface ProductsContainerProps {
   productSort: ProductSortState;
   product: ProductState;
   cart: CartState;
-  addProductToCart: typeof addProductToCart;
+  addToCart: typeof addToCart;
 }
 
 class ProductsContainer extends React.Component<ProductsContainerProps> {
@@ -48,16 +48,11 @@ class ProductsContainer extends React.Component<ProductsContainerProps> {
     this.setState({ activeSort: sortKey });
   };
 
-  addToCart = (product: number, size: number, price: number) => {
-    let { props } = this;
-    props.addProductToCart(product, size, price);
-  };
-
   render() {
     let { props, state } = this;
 
     return (
-      <div className="container">
+      <div className="container container--home">
         <div className="content__top">
           <CategoryList
             activeCategory={state.activeCategory}
@@ -73,7 +68,7 @@ class ProductsContainer extends React.Component<ProductsContainerProps> {
         <ProductList
           items={props.product.items}
           cart={props.cart.items}
-          addToCart={this.addToCart}
+          addToCart={props.addToCart}
         />
       </div>
     );
@@ -93,6 +88,6 @@ export default connect(
   mapStateToProps,
   {
     sendCategory,
-    addProductToCart,
+    addToCart,
   }
 )(ProductsContainer);

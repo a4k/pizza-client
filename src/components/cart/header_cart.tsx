@@ -1,18 +1,15 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { CartState } from '../../store/cart/types';
 import { AppState } from '../../store';
 import { Button } from '../common/button';
 
 interface HeaderCartProps {
-  cart: CartState;
   quantity: number;
   totalPrice: number;
 }
 
 const HeaderCart: React.FunctionComponent<HeaderCartProps> = ({
-  cart,
   quantity,
   totalPrice,
 }: HeaderCartProps) => {
@@ -57,15 +54,25 @@ const HeaderCart: React.FunctionComponent<HeaderCartProps> = ({
     </div>
   );
 };
+
 const mapStateToProps = (state: AppState) => {
-  let quantity = state.cart.items.length;
   let totalPrice = 0;
-  state.cart.items.map(product => {
-    totalPrice += product.price;
-    return product;
+  let quantity = 0;
+  state.cart.items.forEach(item => {
+    const productItem = state.product.items.find(
+      productItem => productItem.id === item.product
+    );
+    if (productItem) {
+      const productSize = productItem.size.find(
+        sizeItem => sizeItem.id === item.size
+      );
+      if (productSize) {
+        quantity += item.quantity;
+        totalPrice += item.quantity * productSize.price;
+      }
+    }
   });
   return {
-    cart: state.cart,
     quantity,
     totalPrice,
   };

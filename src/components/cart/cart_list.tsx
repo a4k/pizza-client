@@ -1,20 +1,29 @@
 import React from 'react';
-import { CartProduct } from '../../store/cart/types';
+import { CartItemModel } from '../../store/cart/types';
 import CartItem from './cart_item';
-import { Product } from '../../store/product/types';
 
 interface CartListProps {
-  cartProducts: CartProduct[];
+  items: CartItemModel[];
+  onChangeQuantity: (
+    productId: number,
+    sizeId: number,
+    quantity: number
+  ) => void;
 }
 
 const CartList: React.FunctionComponent<CartListProps> = ({
   items,
+  onChangeQuantity,
 }: CartListProps) => {
   return (
     <div>
       <div className="content__items">
         {items.map(item => (
-          <CartItem key={`${item.product}_${item.size}`} item={item} />
+          <CartItem
+            key={`${item.cart.product}_${item.cart.size}`}
+            onChangeQuantity={onChangeQuantity}
+            item={item}
+          />
         ))}
       </div>
     </div>

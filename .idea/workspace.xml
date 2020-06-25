@@ -2,34 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68e411ca-96ce-42d0-a81c-4a4417ecf957" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/cart/cart_item.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/cart/cart_list.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/components/_cart.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/cart/cart_container.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart/cart_container.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cart/cart_item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart/cart_item.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cart/cart_list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart/cart_list.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/cart/header_cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart/header_cart.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/category/category_item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/category/category_item.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/category/category_list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/category/category_list.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/common/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/product_sort/product_sort.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product_sort/product_sort.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/product_sort/product_sort_item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product_sort/product_sort_item.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/products/product_item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/product_item.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/products/product_list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/product_list.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/products/products_container.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/products_container.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_all.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_all.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_pizza-block.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_pizza-block.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/category/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/category/actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/category/reducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/category/reducers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/category/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/category/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_cart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_cart.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/cart/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/cart/actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/cart/reducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/cart/reducers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/cart/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/cart/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/product/reducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/product/reducers.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/product/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/product/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/product_sort/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/product_sort/actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/product_sort/reducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/product_sort/reducers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/product_sort/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/product_sort/types.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -43,47 +32,72 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/products/products_container.tsx">
+        <entry file="file://$PROJECT_DIR$/src/components/cart/cart_container.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+            <state relative-caret-position="238">
+              <caret line="64" column="42" lean-forward="true" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
               <folding>
                 <element signature="e#102#140#0" expanded="true" />
-                <element signature="e#2135#2545#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/products/product_list.tsx">
+        <entry file="file://$PROJECT_DIR$/src/store/cart/types.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+            <state relative-caret-position="202">
+              <caret line="30" column="26" lean-forward="true" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/cart/header_cart.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="72" column="5" lean-forward="true" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#0#31#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/store/cart/reducers.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="44" column="34" selection-start-line="44" selection-start-column="34" selection-end-line="44" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#92#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/store/cart/actions.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="27" lean-forward="true" selection-start-column="27" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/cart/cart_container.tsx">
+        <entry file="file://$PROJECT_DIR$/src/scss/components/_cart.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="97" column="22" lean-forward="true" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
+            <state relative-caret-position="294">
+              <caret line="207" column="21" selection-start-line="207" selection-start-column="21" selection-end-line="207" selection-end-column="21" />
               <folding>
-                <element signature="e#102#140#0" expanded="true" />
+                <element signature="e#42#127#0" />
+                <element signature="e#147#414#0" />
+                <element signature="e#928#2918#0" />
+                <element signature="e#1236#1542#0" />
+                <element signature="e#1962#2169#0" />
+                <element signature="e#4126#4670#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/product/types.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="12" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -91,8 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/cart/cart_list.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+            <state relative-caret-position="284">
+              <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -103,38 +117,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/cart/cart_item.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+            <state relative-caret-position="743">
+              <caret line="54" column="11" lean-forward="true" selection-start-line="54" selection-start-column="11" selection-end-line="54" selection-end-column="11" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scss/components/_cart.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="160" column="29" lean-forward="true" selection-start-line="160" selection-start-column="29" selection-end-line="160" selection-end-column="29" />
-              <folding>
-                <element signature="e#146#413#0" />
-                <element signature="e#426#915#0" />
-                <element signature="e#1059#1222#0" />
-                <element signature="e#1235#1541#0" />
-                <element signature="e#1555#1829#0" />
-                <element signature="e#2724#3905#0" />
-                <element signature="e#3918#4462#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scss/app.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="34" column="29" lean-forward="true" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -151,11 +138,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>babel</find>
-      <find>postcss.config</find>
-      <find>redux</find>
-      <find>typescript</find>
-      <find>react</find>
       <find>MESSAGE</find>
       <find>Category</find>
       <find>CATEGORY</find>
@@ -181,6 +163,11 @@
       <find>activeCategory</find>
       <find>pizza-block</find>
       <find>useTypeScript</find>
+      <find>public</find>
+      <find>&lt;Button</find>
+      <find>ADD_TO_CART</find>
+      <find>remove</find>
+      <find>addProductToCart</find>
     </findStrings>
     <replaceStrings>
       <replace>CATEGORY</replace>
@@ -210,10 +197,7 @@
         <option value="$PROJECT_DIR$/src/store/product/actions.ts" />
         <option value="$PROJECT_DIR$/config/loaders.js" />
         <option value="$PROJECT_DIR$/src/store/index.ts" />
-        <option value="$PROJECT_DIR$/src/store/cart/actions.ts" />
         <option value="$PROJECT_DIR$/src/thunks.ts" />
-        <option value="$PROJECT_DIR$/src/store/cart/reducers.ts" />
-        <option value="$PROJECT_DIR$/src/store/cart/types.ts" />
         <option value="$PROJECT_DIR$/config/plugins.js" />
         <option value="$PROJECT_DIR$/config/webpack.dev.js" />
         <option value="$PROJECT_DIR$/config/env.js" />
@@ -221,16 +205,10 @@
         <option value="$PROJECT_DIR$/scripts/startdev.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/app.tsx" />
-        <option value="$PROJECT_DIR$/src/components/common/button.tsx" />
-        <option value="$PROJECT_DIR$/src/components/cart/header_cart.tsx" />
         <option value="$PROJECT_DIR$/src/components/common/header.tsx" />
-        <option value="$PROJECT_DIR$/src/store/product/types.ts" />
-        <option value="$PROJECT_DIR$/src/store/product/reducers.ts" />
         <option value="$PROJECT_DIR$/src/components/category/category_list.tsx" />
         <option value="$PROJECT_DIR$/src/components/category/category_item.tsx" />
-        <option value="$PROJECT_DIR$/src/components/products/product_item.tsx" />
         <option value="$PROJECT_DIR$/src/scss/components/_pizza-block.scss" />
-        <option value="$PROJECT_DIR$/src/components/products/product_list.tsx" />
         <option value="$PROJECT_DIR$/src/components/product_sort/product_sort_item.tsx" />
         <option value="$PROJECT_DIR$/src/components/product_sort/product_sort.tsx" />
         <option value="$PROJECT_DIR$/src/store/product_sort/actions.ts" />
@@ -239,18 +217,27 @@
         <option value="$PROJECT_DIR$/src/store/category/reducers.ts" />
         <option value="$PROJECT_DIR$/src/store/product_sort/reducers.ts" />
         <option value="$PROJECT_DIR$/src/store/product_sort/types.ts" />
-        <option value="$PROJECT_DIR$/src/components/products/products_container.tsx" />
-        <option value="$PROJECT_DIR$/src/scss/app.scss" />
         <option value="$PROJECT_DIR$/src/scss/components/_all.scss" />
-        <option value="$PROJECT_DIR$/src/scss/components/_cart.scss" />
-        <option value="$PROJECT_DIR$/src/components/cart/cart_item.tsx" />
+        <option value="$PROJECT_DIR$/src/store/product/types.ts" />
+        <option value="$PROJECT_DIR$/src/store/product/reducers.ts" />
         <option value="$PROJECT_DIR$/src/components/cart/cart_list.tsx" />
+        <option value="$PROJECT_DIR$/src/components/products/product_list.tsx" />
+        <option value="$PROJECT_DIR$/src/components/cart/header_cart.tsx" />
+        <option value="$PROJECT_DIR$/src/components/products/product_item.tsx" />
+        <option value="$PROJECT_DIR$/src/scss/app.scss" />
+        <option value="$PROJECT_DIR$/src/components/products/products_container.tsx" />
+        <option value="$PROJECT_DIR$/src/components/common/button.tsx" />
+        <option value="$PROJECT_DIR$/src/components/cart/cart_item.tsx" />
+        <option value="$PROJECT_DIR$/src/store/cart/types.ts" />
+        <option value="$PROJECT_DIR$/src/store/cart/reducers.ts" />
+        <option value="$PROJECT_DIR$/src/store/cart/actions.ts" />
         <option value="$PROJECT_DIR$/src/components/cart/cart_container.tsx" />
+        <option value="$PROJECT_DIR$/src/scss/components/_cart.scss" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="147" />
+    <option name="x" value="146" />
     <option name="y" value="185" />
     <option name="width" value="1920" />
     <option name="height" value="1030" />
@@ -284,6 +271,19 @@
               <item name="pizza-client" type="b2602c69:ProjectViewProjectNode" />
               <item name="pizza-client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pizza-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pizza-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pizza-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pizza-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pizza-client" type="b2602c69:ProjectViewProjectNode" />
@@ -323,6 +323,20 @@
               <item name="pizza-client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="store" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pizza-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pizza-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="cart" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pizza-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pizza-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="product" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -430,7 +444,8 @@
       <workItem from="1592826974453" duration="700000" />
       <workItem from="1592843101326" duration="8820000" />
       <workItem from="1592981813250" duration="1014000" />
-      <workItem from="1592984546162" duration="8560000" />
+      <workItem from="1592984546162" duration="9315000" />
+      <workItem from="1593062362546" duration="15121000" />
     </task>
     <task id="LOCAL-00001" summary="updated structure of project">
       <created>1592726396431</created>
@@ -481,11 +496,18 @@
       <option name="project" value="LOCAL" />
       <updated>1592900562457</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="cart">
+      <created>1592996618237</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1592996618237</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37500000" />
+    <option name="totallyTimeSpent" value="53376000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -518,19 +540,11 @@
     <MESSAGE value="updated structure of project" />
     <MESSAGE value="category sort" />
     <MESSAGE value="product sort and categories. added click on button" />
-    <MESSAGE value="cart" />
     <MESSAGE value="webpack" />
-    <option name="LAST_COMMIT_MESSAGE" value="webpack" />
+    <MESSAGE value="cart" />
+    <option name="LAST_COMMIT_MESSAGE" value="cart" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/models/category.ts" />
-    <entry file="file://$PROJECT_DIR$/src/scss/components/_categories.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scss/components/_sort.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -558,25 +572,11 @@
     <entry file="file://$PROJECT_DIR$/config/webpack.prod.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/cart/actions.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/manifest.json" />
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/cart/types.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
@@ -590,27 +590,9 @@
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/env.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="33" lean-forward="true" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/paths.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="58" column="13" selection-start-line="58" selection-start-column="2" selection-end-line="58" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/startdev.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="106" column="17" lean-forward="true" selection-start-line="106" selection-start-column="17" selection-end-line="106" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/config/env.js" />
+    <entry file="file://$PROJECT_DIR$/config/paths.js" />
+    <entry file="file://$PROJECT_DIR$/scripts/startdev.js" />
     <entry file="file://$PROJECT_DIR$/src/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -660,13 +642,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/common/button.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/common/header.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -674,27 +649,6 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/cart/header_cart.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/product/actions.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/product/reducers.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -714,16 +668,6 @@
           <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/products/product_item.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="33" column="65" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="65" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -817,54 +761,95 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/product/actions.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/product/reducers.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="e#0#100#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/product/types.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/products/product_item.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#75#145#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/img/plus.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/img/empty-cart.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/common/button.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/scss/app.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="34" column="29" lean-forward="true" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+        <state relative-caret-position="234">
+          <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/products/product_list.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+        <state relative-caret-position="83">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/components/_cart.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="160" column="29" lean-forward="true" selection-start-line="160" selection-start-column="29" selection-end-line="160" selection-end-column="29" />
-          <folding>
-            <element signature="e#146#413#0" />
-            <element signature="e#426#915#0" />
-            <element signature="e#1059#1222#0" />
-            <element signature="e#1235#1541#0" />
-            <element signature="e#1555#1829#0" />
-            <element signature="e#2724#3905#0" />
-            <element signature="e#3918#4462#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/products/products_container.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+        <state relative-caret-position="185">
+          <caret line="67" column="17" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="17" />
           <folding>
             <element signature="e#102#140#0" expanded="true" />
-            <element signature="e#2135#2545#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/cart/cart_item.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        <state relative-caret-position="743">
+          <caret line="54" column="11" lean-forward="true" selection-start-line="54" selection-start-column="11" selection-end-line="54" selection-end-column="11" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -873,45 +858,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/cart/cart_list.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        <state relative-caret-position="284">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/cart/reducers.ts">
+    <entry file="file://$PROJECT_DIR$/src/store/cart/types.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+        <state relative-caret-position="202">
+          <caret line="30" column="26" lean-forward="true" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/index.ts">
+    <entry file="file://$PROJECT_DIR$/src/store/cart/reducers.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        <state relative-caret-position="136">
+          <caret line="44" column="34" selection-start-line="44" selection-start-column="34" selection-end-line="44" selection-end-column="34" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#75#145#0" expanded="true" />
+            <element signature="e#0#92#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/product/types.ts">
+    <entry file="file://$PROJECT_DIR$/src/store/cart/actions.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="12" selection-end-column="22" />
+        <state>
+          <caret column="27" lean-forward="true" selection-start-column="27" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/cart/header_cart.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="72" column="5" lean-forward="true" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/cart/cart_container.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="97" column="22" lean-forward="true" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
+        <state relative-caret-position="238">
+          <caret line="64" column="42" lean-forward="true" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
           <folding>
             <element signature="e#102#140#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/components/_cart.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="207" column="21" selection-start-line="207" selection-start-column="21" selection-end-line="207" selection-end-column="21" />
+          <folding>
+            <element signature="e#42#127#0" />
+            <element signature="e#147#414#0" />
+            <element signature="e#928#2918#0" />
+            <element signature="e#1236#1542#0" />
+            <element signature="e#1962#2169#0" />
+            <element signature="e#4126#4670#0" />
           </folding>
         </state>
       </provider>

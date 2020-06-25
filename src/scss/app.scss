@@ -40,6 +40,10 @@ body {
   width: $container-width;
   margin: 0 auto;
 
+  &--home {
+    margin-top: 50px;
+  }
+
   &--cart {
     max-width: 820px;
     margin: 90px auto;

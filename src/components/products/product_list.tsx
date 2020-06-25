@@ -6,7 +6,7 @@ import { CartProduct } from '../../store/cart/types';
 interface ProductListProps {
   items: Product[];
   cart: CartProduct[];
-  addToCart: (product: number, size: number, price: number) => void;
+  addToCart: (product: number, size: number) => void;
 }
 
 const ProductList: React.FunctionComponent<ProductListProps> = ({

@@ -18,10 +18,15 @@ export interface ProductState {
 }
 
 export const SEND_PRODUCT = 'SEND_PRODUCT';
+export const RECEIVE_PRODUCTS = 'RECEIVE_PRODUCTS';
 
 interface SendProductAction {
   type: typeof SEND_PRODUCT;
   payload: Product;
 }
+interface ReceiveProductsAction {
+  type: typeof RECEIVE_PRODUCTS;
+  products: Product[];
+}
 
-export type ProductActionTypes = SendProductAction;
+export type ProductActionTypes = SendProductAction | ReceiveProductsAction;

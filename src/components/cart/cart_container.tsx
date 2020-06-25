@@ -2,110 +2,109 @@ import React from 'react';
 // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
 // @ts-ignore
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { AppState } from '../../store';
-import { Product, ProductSize, ProductState } from '../../store/product/types';
-import {CartProduct, CartProductItem, CartState} from '../../store/cart/types';
-import { addProductToCart } from '../../store/cart/actions';
+import { CartItemModel } from '../../store/cart/types';
+import { addToCart, changeQuantity, emptyCart } from '../../store/cart/actions';
 import CartList from './cart_list';
-
+import { Button } from '../common/button';
 
 interface CartContainerProps {
-  cartProducts: CartProductItem[];
-  product: ProductState;
-  cart: CartState;
-  addProductToCart: typeof addProductToCart;
+  cartItems: CartItemModel[];
+  addToCart: typeof addToCart;
+  emptyCart: typeof emptyCart;
+  changeQuantity: typeof changeQuantity;
+  quantity: number;
+  totalPrice: number;
 }
 
 class CartContainer extends React.Component<CartContainerProps> {
   render() {
     let { props } = this;
 
+    if (props.quantity === 0) {
+      return (
+        <div className="container--cart">
+          <div className="cart--empty">
+            <h2>Корзина пустая</h2>
+            <p className="cart--empty__info">
+              Вероятней всего, вы не заказывали ещё пиццу. <br /> Для того,
+              чтобы заказать пиццу, перейдите на главную страницу
+            </p>
+            <Link to="/">
+              <Button className="button--black">Вернуться назад</Button>
+            </Link>
+          </div>
+        </div>
+      );
+    }
     return (
       <div className="container--cart">
         <div className="cart__top">
           <h2 className="content__title">Корзина</h2>
+          <div className="cart__clear" onClick={props.emptyCart}>
+            <span>Очистить корзину</span>
+          </div>
         </div>
-        <CartList items={props.cartProducts} />
+        <CartList
+          onChangeQuantity={props.changeQuantity}
+          items={props.cartItems}
+        />
+        <div className="cart__bottom">
+          <div className="cart__bottom-details">
+            <span>
+              Всего пицц: <b>{props.quantity} шт.</b>
+            </span>
+            <span>
+              Сумма заказа: <b>{props.totalPrice} ₽</b>
+            </span>
+          </div>
+          <div className="cart__bottom-buttons">
+            <Link to="/">
+              <Button className="go-back-btn" outline={true}>
+                <span>Вернуться назад</span>
+              </Button>
+            </Link>
+            <Button className="pay-btn">Оплатить сейчас</Button>
+          </div>
+        </div>
       </div>
     );
   }
 }
 
-function getProductById(products: Product[], productId: number): Product {
-  let findProduct: Product = {
-    id: 0,
-    description: '',
-    title: '',
-    image: '',
-    size: [],
-  };
-  products.map(product => {
-    if (productId === product.id) {
-      findProduct = product;
-    }
-    return product;
-  });
-  return findProduct;
-}
-
-function getCartProductById(
-  productItems: CartProductItem[],
-  productId: number,
-  sizeId: number
-): CartProductItem {
-  let findProduct: CartProductItem = {
-    id: 0,
-    description: '',
-    title: '',
-    image: '',
-    size: { id: 0, price: 0, size: 0, title: '' },
-    quantity: 0,
-  };
-  productItems.map(product => {
-    if (productId === product.id && sizeId === product.size.id) {
-      findProduct = product;
-    }
-    return product;
-  });
-  return findProduct;
-}
-
 const mapStateToProps = (state: AppState) => {
-  let arCart: CartProductItem[] = [];
-  state.cart.items.map(item => {
-    let product = getProductById(state.product.items, item.product);
-    let cartProduct = getCartProductById(arCart, item.product, item.size);
-    if (cartProduct.id > 0) {
-      cartProduct.quantity += 1;
-    } else {
-      let productSize: ProductSize = { id: 0, title: '', size: 0, price: 0 };
-      product.size.map(sizeItem => {
-        if (sizeItem.id === item.size) {
-          productSize = sizeItem;
-        }
-        return sizeItem;
-      });
-      let cartItem = {
-        id: item.product,
-        description: product.description,
-        title: product.title,
-        image: product.image,
-        size: productSize,
-        quantity: 1,
-      };
-      arCart.push(cartItem);
+  const cartItems: CartItemModel[] = [];
+  let quantity = 0;
+  let totalPrice = 0;
+  state.cart.items.forEach(item => {
+    const product = state.product.items.find(
+      productItem => item.product === productItem.id
+    );
+    if (product) {
+      const productSize = product.size.find(
+        sizeItem => sizeItem.id === item.size
+      );
+      if (productSize) {
+        const cartItem: CartItemModel = { cart: item, product };
+        cartItems.push(cartItem);
+        quantity += item.quantity;
+        totalPrice += item.quantity * productSize.price;
+      }
     }
-    return item;
   });
   return {
-    product: state.product,
-    cart: state.cart,
+    cartItems,
+    quantity,
+    totalPrice,
   };
 };
 
 export default connect(
   mapStateToProps,
   {
-    addProductToCart,
+    addToCart,
+    emptyCart,
+    changeQuantity,
   }
 )(CartContainer);
