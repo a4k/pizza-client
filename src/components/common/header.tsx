@@ -9,8 +9,8 @@ export const Header: React.FunctionComponent = () => {
         <Link to="/">
           <div className="header__logo">
             <div>
-              <h1>Innoscripta Pizza</h1>
-              <p>the most delicious pizza</p>
+              <h1>Pizza</h1>
+              <p>The most delicious pizza</p>
             </div>
           </div>
         </Link>

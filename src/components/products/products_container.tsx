@@ -25,20 +25,8 @@ interface ProductsContainerProps {
 class ProductsContainer extends React.Component<ProductsContainerProps> {
   state = {
     activeCategory: 0,
-    activeSort: 'popular',
+    activeSort: 'popularity',
   };
-
-  componentDidMount() {
-    const { props } = this;
-    props.sendCategory({
-      id: 1,
-      title: 'Chat Bot',
-    });
-    props.sendCategory({
-      id: 2,
-      title: 'Chat Bot',
-    });
-  }
 
   selectCategory = (categoryId: number) => {
     this.setState({ activeCategory: categoryId });

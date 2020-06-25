@@ -13,11 +13,12 @@ const HeaderCart: React.FunctionComponent<HeaderCartProps> = ({
   quantity,
   totalPrice,
 }: HeaderCartProps) => {
+  const currency = '$';
   return (
     <div className="header__cart">
       <Link to="/cart">
         <Button className="button--cart">
-          <span>{totalPrice} ₽</span>
+          <span>{currency}{totalPrice}</span>
           <div className="button__delimiter" />
           <svg
             width="18"

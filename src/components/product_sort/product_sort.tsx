@@ -43,7 +43,7 @@ const ProductSortList: React.FunctionComponent<ProductSortListProps> = ({
             fill="#2C2C2C"
           />
         </svg>
-        <b>Сортировка по:</b>
+        <b>Sort by:</b>
         <span onClick={() => setIsOpen(!isOpen)}>{itemActiveSort.value}</span>
       </div>
       <div className={`sort__popup  ${sortIsOpenClassName}`}>

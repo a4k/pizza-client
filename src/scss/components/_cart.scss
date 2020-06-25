@@ -100,11 +100,18 @@
       justify-content: space-between;
       width: 13%;
 
-      &-minus {
+      div {
         cursor: pointer;
         text-align: center;
-        width: 24px;
-        height: 24px;
+        width: 30px;
+        height: 40px;
+        color: $orange;
+        border: 1px solid $orange;
+        border-radius: 10px;
+        line-height: 35px;
+        font-weight: bold;
+      }
+      &-minus {
         svg {
           path:first-of-type {
             display: none;
@@ -113,10 +120,6 @@
       }
 
       &-plus {
-        cursor: pointer;
-        text-align: center;
-        width: 24px;
-        height: 24px;
         svg {
           path:first-of-type {
             display: none;
@@ -149,7 +152,8 @@
       width: 4%;
 
       .button {
-        color: darken($color: $gray-line, $amount: 15);
+        font-weight: bold;
+        color: darken($color: $gray-line, $amount: 30);
         background-color: white;
         border-color: darken($color: $gray-line, $amount: 10);
       }

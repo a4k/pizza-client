@@ -3,13 +3,13 @@ export interface ProductSize {
   title: string;
   size: number;
   price: number;
+  image?: string;
 }
 
 export interface Product {
   id: number;
   title: string;
   description: string;
-  image: string;
   size: ProductSize[];
 }
 

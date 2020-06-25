@@ -8,14 +8,34 @@ import {
 const initItems = [
   {
     id: 1,
-    title: 'Чизбургер-пицца',
-    image: 'test',
+    title: 'Chicken Club',
     description:
-      'Бекон, сыры чеддер и пармезан, моцарелла, томаты черри, лук, чеснок, сливочный соус, итальянские травы',
+      'Grilled chicken, cherry tomatoes, ricotta, fresh parsley, mozzarella, bacon, red onions',
     size: [
-      { id: 1, title: '26 см.', size: 26, price: 395 },
-      { id: 2, title: '30 см.', size: 30, price: 450 },
-      { id: 3, title: '40 см.', size: 40, price: 555 },
+      {
+        id: 1,
+        title: '10"',
+        size: 10,
+        price: 13,
+        image:
+          'https://eu2dodostatic.blob.core.windows.net/usa/Img/Products/Pizza/en-US/146946a5-b2b4-4054-a697-c07c02eb5740.jpg',
+      },
+      {
+        id: 2,
+        title: '12"',
+        size: 12,
+        price: 15,
+        image:
+          'https://eu2dodostatic.blob.core.windows.net/usa/Img/Products/Pizza/en-US/91c47562-2f54-4dfc-8248-2a9c64aeb34c.jpg',
+      },
+      {
+        id: 3,
+        title: '14"',
+        size: 14,
+        price: 17,
+        image:
+          'https://eu2dodostatic.blob.core.windows.net/usa/Img/Products/Pizza/en-US/bcb198e7-81e5-4e8d-85d4-6cd01684585f.jpg',
+      },
     ],
   },
 ];

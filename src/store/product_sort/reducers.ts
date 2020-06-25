@@ -5,9 +5,9 @@ import {
 } from './types';
 
 const initItems = [
-  { key: 'popular', value: 'популярности' },
-  { key: 'price', value: 'цене' },
-  { key: 'name', value: 'алфавиту' },
+  { key: 'popularity', value: 'Popularity' },
+  { key: 'price', value: 'Price' },
+  { key: 'name', value: 'Name' },
 ];
 const initialState: ProductSortState = {
   items: initItems,

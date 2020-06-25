@@ -1,7 +1,7 @@
 import React from 'react';
 // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
 // @ts-ignore
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { AppState } from '../store';
 
@@ -37,7 +37,7 @@ class App extends React.Component<AppProps> {
               <CartContainer />
             </Route>
             <Route path="/">
-              <ProductsContainer {...this.props} />
+              <ProductsContainer />
             </Route>
           </Switch>
         </div>

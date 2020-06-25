@@ -21,18 +21,16 @@ interface CartContainerProps {
 class CartContainer extends React.Component<CartContainerProps> {
   render() {
     let { props } = this;
+    const currency = '$';
 
     if (props.quantity === 0) {
       return (
         <div className="container--cart">
           <div className="cart--empty">
-            <h2>Корзина пустая</h2>
-            <p className="cart--empty__info">
-              Вероятней всего, вы не заказывали ещё пиццу. <br /> Для того,
-              чтобы заказать пиццу, перейдите на главную страницу
-            </p>
+            <h2>Empty basket</h2>
+            <p className="cart--empty__info">Let's add something!</p>
             <Link to="/">
-              <Button className="button--black">Вернуться назад</Button>
+              <Button className="button--black">Back to menu</Button>
             </Link>
           </div>
         </div>
@@ -41,9 +39,9 @@ class CartContainer extends React.Component<CartContainerProps> {
     return (
       <div className="container--cart">
         <div className="cart__top">
-          <h2 className="content__title">Корзина</h2>
+          <h2 className="content__title">My order</h2>
           <div className="cart__clear" onClick={props.emptyCart}>
-            <span>Очистить корзину</span>
+            <span>Clear basket</span>
           </div>
         </div>
         <CartList
@@ -53,19 +51,22 @@ class CartContainer extends React.Component<CartContainerProps> {
         <div className="cart__bottom">
           <div className="cart__bottom-details">
             <span>
-              Всего пицц: <b>{props.quantity} шт.</b>
+              Total quantity: <b>{props.quantity}</b>
             </span>
             <span>
-              Сумма заказа: <b>{props.totalPrice} ₽</b>
+              Total price:{' '}
+              <b>
+                {currency}{props.totalPrice}
+              </b>
             </span>
           </div>
           <div className="cart__bottom-buttons">
             <Link to="/">
               <Button className="go-back-btn" outline={true}>
-                <span>Вернуться назад</span>
+                <span>Back to menu</span>
               </Button>
             </Link>
-            <Button className="pay-btn">Оплатить сейчас</Button>
+            <Button className="pay-btn">Next</Button>
           </div>
         </div>
       </div>

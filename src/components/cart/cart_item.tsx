@@ -15,6 +15,7 @@ const CartItem: React.FunctionComponent<CartItemProps> = ({
   item,
   onChangeQuantity,
 }: CartItemProps) => {
+  const currency = '$';
   const productSize = item.product.size.find(
     sizeItem => sizeItem.id === item.cart.size
   );
@@ -22,7 +23,7 @@ const CartItem: React.FunctionComponent<CartItemProps> = ({
   return (
     <div className="cart__item">
       <div className="cart__item-img">
-        <img src={item.product.image} alt="" />
+        <img src={productSize ? productSize.image : ''} alt="" />
       </div>
       <div className="cart__item-info">
         <h3>{item.product.title}</h3>
@@ -56,7 +57,10 @@ const CartItem: React.FunctionComponent<CartItemProps> = ({
         </div>
       </div>
       <div className="cart__item-price">
-        <b>{item.cart.quantity * productPrice} Р</b>
+        <b>
+          {currency}
+          {item.cart.quantity * productPrice}
+        </b>
       </div>
       <div className="cart__item-remove">
         <Button

@@ -13,6 +13,7 @@ const ProductItem: React.FunctionComponent<ProductItemProps> = ({
   cart,
   addToCart,
 }: ProductItemProps) => {
+  const currency = '$';
   const [activeSize, setActiveSize] = useState(item.size[0]);
 
   let countOfProduct = 0;
@@ -25,11 +26,7 @@ const ProductItem: React.FunctionComponent<ProductItemProps> = ({
 
   return (
     <div className="pizza-block">
-      <img
-        className="pizza-block__image"
-        src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg"
-        alt="Pizza"
-      />
+      <img className="pizza-block__image" src={activeSize.image} alt="Pizza" />
       <h4 className="pizza-block__title">{item.title}</h4>
       <div className="pizza-block__description">{item.description}</div>
       <div className="pizza-block__selector">
@@ -46,7 +43,10 @@ const ProductItem: React.FunctionComponent<ProductItemProps> = ({
         </ul>
       </div>
       <div className="pizza-block__bottom">
-        <div className="pizza-block__price">{activeSize.price} ₽</div>
+        <div className="pizza-block__price">
+          {currency}
+          {activeSize.price}
+        </div>
         <div
           className="button button--outline button--add"
           onClick={() => addToCart(item.id, activeSize.id)}
@@ -63,7 +63,7 @@ const ProductItem: React.FunctionComponent<ProductItemProps> = ({
               fill="white"
             />
           </svg>
-          <span>Добавить</span>
+          <span>Add to cart</span>
           <i>{countOfProduct}</i>
         </div>
       </div>

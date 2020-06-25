@@ -16,7 +16,7 @@ const ProductList: React.FunctionComponent<ProductListProps> = ({
 }: ProductListProps) => {
   return (
     <div>
-      <h2 className="content__title">Пицца</h2>
+      <h2 className="content__title">Pizza</h2>
       <div className="content__items">
         {items.map(item => (
           <ProductItem

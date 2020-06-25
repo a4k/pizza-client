@@ -1,7 +1,7 @@
 import { CategoriesState, SEND_CATEGORY, CategoriesActionTypes } from './types';
 
 const initialState: CategoriesState = {
-  items: [],
+  items: [{ id: 0, title: 'All' }, { id: 1, title: 'Meat' }, { id: 2, title: 'Vegetarian' }],
 };
 
 export function categoryReducer(
