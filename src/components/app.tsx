@@ -16,20 +16,20 @@ interface AppProps {
 }
 
 class App extends React.Component<AppProps> {
-  componentDidMount() {
-    const { props } = this;
-    props.updateSession({
-      loggedIn: true,
-      session: 'my_session',
-      userName: 'myName',
-    });
+  selectCurrency(currency: string) {
+    // this.setState({ currency });
   }
 
   render() {
+    const { state } = this;
     return (
       <Router>
         <div>
-          <Header />
+          <Header
+            currency={state.currency}
+            currencyItems={state.currencyItems}
+            selectCurrency={this.selectCurrency}
+          />
           <Switch>
             <Route path="/cart">
               <CartContainer />

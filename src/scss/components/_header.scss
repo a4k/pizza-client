@@ -29,4 +29,23 @@
       color: #7b7b7b;
     }
   }
+
+  &__currency {
+    display: flex;
+    .active {
+      border: 1px solid $orange;
+    }
+    div {
+      margin: 0 10px;
+      width: 40px;
+      height: 30px;
+      cursor: pointer;
+      text-align: center;
+      line-height: 25px;
+      border: 1px solid $gray-line;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+    }
+  }
 }
