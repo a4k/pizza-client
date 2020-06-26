@@ -3,24 +3,28 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { AppState } from '../../store';
 import { Button } from '../common/button';
+import { CurrencyModel } from '../../store/system/types';
+import { calculatePrice } from '../../utils/price';
 
 interface HeaderCartProps {
   quantity: number;
   totalPrice: number;
+  currencyItem: CurrencyModel;
 }
 
 const HeaderCart: React.FunctionComponent<HeaderCartProps> = ({
   quantity,
   totalPrice,
+  currencyItem,
 }: HeaderCartProps) => {
-  const currency = '$';
+  const currency = currencyItem.value;
   return (
     <div className="header__cart">
       <Link to="/cart">
         <Button className="button--cart">
           <span>
             {currency}
-            {totalPrice}
+            {calculatePrice(currencyItem.name, totalPrice)}
           </span>
           <div className="button__delimiter" />
           <svg
@@ -62,6 +66,13 @@ const HeaderCart: React.FunctionComponent<HeaderCartProps> = ({
 const mapStateToProps = (state: AppState) => {
   let totalPrice = 0;
   let quantity = 0;
+  const { defaultCurrency } = state.system;
+  let currencyItem = state.system.currency.find(
+    item => item.name === defaultCurrency
+  );
+  if (!currencyItem) {
+    currencyItem = { name: 'dollar', value: '$' };
+  }
   state.cart.items.forEach(item => {
     const productItem = state.product.data.find(
       productItem => productItem.id === item.product
@@ -79,6 +90,7 @@ const mapStateToProps = (state: AppState) => {
   return {
     quantity,
     totalPrice,
+    currencyItem,
   };
 };
 

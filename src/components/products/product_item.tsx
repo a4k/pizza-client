@@ -2,12 +2,15 @@ import React, { useState } from 'react';
 import { Product } from '../../store/product/types';
 import { CartProduct } from '../../store/cart/types';
 import { getImageUrl } from '../../utils/image';
+import { CurrencyModel } from '../../store/system/types';
+import { calculatePrice } from '../../utils/price';
 
 interface ProductItemProps {
   activeCategory: string;
   item: Product;
   cart: CartProduct[];
   addToCart: (product: number, size: number) => void;
+  currencyItem: CurrencyModel;
 }
 
 const ProductItem: React.FunctionComponent<ProductItemProps> = ({
@@ -15,8 +18,9 @@ const ProductItem: React.FunctionComponent<ProductItemProps> = ({
   item,
   cart,
   addToCart,
+  currencyItem,
 }: ProductItemProps) => {
-  const currency = '$';
+  const currency = currencyItem.value;
   const [activeSize, setActiveSize] = useState(item.size[0]);
 
   let countOfProduct = 0;
@@ -55,7 +59,7 @@ const ProductItem: React.FunctionComponent<ProductItemProps> = ({
       <div className="pizza-block__bottom">
         <div className="pizza-block__price">
           {currency}
-          {activeSize.price}
+          {calculatePrice(currencyItem.name, activeSize.price)}
         </div>
         <div
           className="button button--outline button--add"

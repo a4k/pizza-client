@@ -25,6 +25,33 @@
     }
   }
 
+  &__form {
+    margin-top: 20px;
+    .form {
+      &__row {
+        margin-bottom: 12px;
+      }
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+    input[type=text] {
+      display: block;
+      height: 40px;
+      background-color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+      font-size: 16px;
+      line-height: 40px;
+      box-sizing: border-box;
+      width: 100%;
+      border: 1px solid darken($color: $gray-line, $amount: 30);
+      padding: 0px 15px;
+      outline: none;
+      border-radius: 8px;
+    }
+  }
+
   &__clear {
     display: flex;
     align-items: center;

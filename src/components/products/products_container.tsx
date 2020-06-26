@@ -13,6 +13,7 @@ import { CartState } from '../../store/cart/types';
 import { addToCart } from '../../store/cart/actions';
 import { fetchProductRequest } from '../../store/product/actions';
 import { fetchCategoryRequest } from '../../store/category/actions';
+import { CurrencyModel } from '../../store/system/types';
 
 interface ProductsContainerProps {
   fetchProductRequest: typeof fetchProductRequest;
@@ -22,6 +23,7 @@ interface ProductsContainerProps {
   product: ProductState;
   cart: CartState;
   addToCart: typeof addToCart;
+  currencyItem: CurrencyModel;
 }
 
 class ProductsContainer extends React.Component<ProductsContainerProps> {
@@ -62,6 +64,7 @@ class ProductsContainer extends React.Component<ProductsContainerProps> {
           />
         </div>
         <ProductList
+          currencyItem={props.currencyItem}
           activeSort={state.activeSort}
           items={props.product.data}
           activeCategory={state.activeCategory}
@@ -74,11 +77,19 @@ class ProductsContainer extends React.Component<ProductsContainerProps> {
 }
 
 const mapStateToProps = (state: AppState) => {
+  const { defaultCurrency } = state.system;
+  let currencyItem = state.system.currency.find(
+    item => item.name === defaultCurrency
+  );
+  if (!currencyItem) {
+    currencyItem = { name: 'dollar', value: '$' };
+  }
   return {
     product: state.product,
     category: state.category,
     productSort: state.productSort,
     cart: state.cart,
+    currencyItem,
   };
 };
 

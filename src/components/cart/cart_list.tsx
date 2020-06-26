@@ -1,6 +1,7 @@
 import React from 'react';
 import { CartItemModel } from '../../store/cart/types';
 import CartItem from './cart_item';
+import { CurrencyModel } from '../../store/system/types';
 
 interface CartListProps {
   items: CartItemModel[];
@@ -9,11 +10,13 @@ interface CartListProps {
     sizeId: number,
     quantity: number
   ) => void;
+  currencyItem: CurrencyModel;
 }
 
 const CartList: React.FunctionComponent<CartListProps> = ({
   items,
   onChangeQuantity,
+  currencyItem,
 }: CartListProps) => {
   return (
     <div>
@@ -23,6 +26,7 @@ const CartList: React.FunctionComponent<CartListProps> = ({
             key={`${item.cart.product}_${item.cart.size}`}
             onChangeQuantity={onChangeQuantity}
             item={item}
+            currencyItem={currencyItem}
           />
         ))}
       </div>

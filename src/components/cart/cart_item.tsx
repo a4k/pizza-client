@@ -2,6 +2,8 @@ import React from 'react';
 import { CartItemModel } from '../../store/cart/types';
 import { Button } from '../common/button';
 import { getImageUrl } from '../../utils/image';
+import { CurrencyModel } from '../../store/system/types';
+import { calculatePrice } from '../../utils/price';
 
 interface CartItemProps {
   item: CartItemModel;
@@ -10,13 +12,15 @@ interface CartItemProps {
     sizeId: number,
     quantity: number
   ) => void;
+  currencyItem: CurrencyModel;
 }
 
 const CartItem: React.FunctionComponent<CartItemProps> = ({
   item,
   onChangeQuantity,
+  currencyItem,
 }: CartItemProps) => {
-  const currency = '$';
+  const currency = currencyItem.value;
   const productSize = item.product.size.find(
     sizeItem => sizeItem.id === item.cart.size
   );
@@ -65,7 +69,7 @@ const CartItem: React.FunctionComponent<CartItemProps> = ({
       <div className="cart__item-price">
         <b>
           {currency}
-          {item.cart.quantity * productPrice}
+          {calculatePrice(currencyItem.name, item.cart.quantity * productPrice)}
         </b>
       </div>
       <div className="cart__item-remove">

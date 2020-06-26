@@ -2,6 +2,7 @@ import React from 'react';
 import { Product } from '../../store/product/types';
 import ProductItem from './product_item';
 import { CartProduct } from '../../store/cart/types';
+import {CurrencyModel} from "../../store/system/types";
 
 interface ProductListProps {
   activeSort: string;
@@ -9,6 +10,7 @@ interface ProductListProps {
   items: Product[];
   cart: CartProduct[];
   addToCart: (product: number, size: number) => void;
+  currencyItem: CurrencyModel;
 }
 
 const ProductList: React.FunctionComponent<ProductListProps> = ({
@@ -17,6 +19,7 @@ const ProductList: React.FunctionComponent<ProductListProps> = ({
   items,
   cart,
   addToCart,
+  currencyItem,
 }: ProductListProps) => {
   const compareName = (a: Product, b: Product): number => {
     const bandA = a.title.toUpperCase();
@@ -59,6 +62,7 @@ const ProductList: React.FunctionComponent<ProductListProps> = ({
         {productItems.map(item => (
           <ProductItem
             key={item.id}
+            currencyItem={currencyItem}
             activeCategory={activeCategory}
             cart={cart}
             addToCart={addToCart}

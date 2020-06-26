@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import HeaderCart from '../cart/header_cart';
+import { CurrencyModel } from '../../store/system/types';
 
 interface HeaderProps {
   currency: string;
-  currencyItems: { [key: string]: string };
+  currencyItems: CurrencyModel[];
   selectCurrency: (currency: string) => void;
 }
 
@@ -26,14 +27,16 @@ export const Header: React.FunctionComponent<HeaderProps> = ({
         </Link>
         <div className="header__currency">
           {currencyItems.map(itemCurrency => (
-            <div key={itemCurrency.key} className="header__currency-dollar" onClick={() => selectCurrency(itemCurrency)}>
-              {itemCurrency}
+            <div
+              key={itemCurrency.name}
+              className={`header__currency-item ${
+                currency === itemCurrency.name ? 'active' : ''
+              }`}
+              onClick={() => selectCurrency(itemCurrency.name)}
+            >
+              {itemCurrency.value}
             </div>
           ))}
-          <div className="header__currency-dollar" onClick={selectCurrency}>
-            $
-          </div>
-          <div className="header__currency-euro">€</div>
         </div>
         <HeaderCart />
       </div>

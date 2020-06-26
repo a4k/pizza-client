@@ -1,6 +1,7 @@
 import {
   CartState,
   ADD_TO_CART,
+  ORDER_CART,
   CartActionTypes,
   CHANGE_QUANTITY,
   EMPTY_CART,
@@ -49,6 +50,11 @@ export function cartReducer(
             quantity: 1,
           },
         ]),
+      };
+    case ORDER_CART:
+      return {
+        ...state,
+        items: [],
       };
     case EMPTY_CART:
       return {

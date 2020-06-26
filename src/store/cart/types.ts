@@ -16,6 +16,7 @@ export interface CartState {
 }
 
 export const ADD_TO_CART = 'ADD_TO_CART';
+export const ORDER_CART = 'ORDER_CART';
 export const EMPTY_CART = 'EMPTY_CART';
 export const CHANGE_QUANTITY = 'CHANGE_QUANTITY';
 
@@ -30,8 +31,12 @@ interface ChangeQuantityProductCartAction {
 interface EmptyCartAction {
   type: typeof EMPTY_CART;
 }
+interface OrderCartAction {
+  type: typeof ORDER_CART;
+}
 
 export type CartActionTypes =
   | AddProductToCartAction
   | ChangeQuantityProductCartAction
-  | EmptyCartAction;
+  | EmptyCartAction
+  | OrderCartAction;

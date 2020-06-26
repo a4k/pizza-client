@@ -1,4 +1,4 @@
-import { ADD_TO_CART, CHANGE_QUANTITY, EMPTY_CART } from './types';
+import { ADD_TO_CART, CHANGE_QUANTITY, EMPTY_CART, ORDER_CART } from './types';
 
 export function addToCart(product: number, size: number) {
   return {
@@ -10,6 +10,11 @@ export function addToCart(product: number, size: number) {
 export function emptyCart() {
   return {
     type: EMPTY_CART,
+  };
+}
+export function orderCart() {
+  return {
+    type: ORDER_CART,
   };
 }
 

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { AppState } from '../store';
 
 import { SystemState } from '../store/system/types';
-import { updateSession } from '../store/system/actions';
+import { updateCurrency, updateSession } from '../store/system/actions';
 
 import { Header } from './common/header';
 import ProductsContainer from './products/products_container';
@@ -12,22 +12,24 @@ import CartContainer from './cart/cart_container';
 
 interface AppProps {
   updateSession: typeof updateSession;
+  updateCurrency: typeof updateCurrency;
   system: SystemState;
 }
 
 class App extends React.Component<AppProps> {
-  selectCurrency(currency: string) {
-    // this.setState({ currency });
-  }
+  selectCurrency = (currency: string) => {
+    const { props } = this;
+    props.updateCurrency(currency);
+  };
 
   render() {
-    const { state } = this;
+    const { props } = this;
     return (
       <Router>
         <div>
           <Header
-            currency={state.currency}
-            currencyItems={state.currencyItems}
+            currency={props.system.defaultCurrency}
+            currencyItems={props.system.currency}
             selectCurrency={this.selectCurrency}
           />
           <Switch>
@@ -52,5 +54,5 @@ const mapStateToProps = (state: AppState) => {
 
 export default connect(
   mapStateToProps,
-  { updateSession }
+  { updateSession, updateCurrency }
 )(App);
