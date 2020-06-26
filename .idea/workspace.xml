@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68e411ca-96ce-42d0-a81c-4a4417ecf957" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/utils/price.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cart/cart_container.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart/cart_container.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cart/cart_item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart/cart_item.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cart/cart_list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart/cart_list.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cart/header_cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart/header_cart.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/products/product_item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/product_item.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/products/product_list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/product_list.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/products/products_container.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/products/products_container.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_cart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_cart.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/cart/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/cart/actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/cart/reducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/cart/reducers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/cart/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/cart/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/system/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/system/actions.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,118 +16,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/products/products_container.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
-              <caret line="79" column="2" selection-start-line="79" selection-start-column="2" selection-end-line="85" selection-end-column="3" />
-              <folding>
-                <element signature="e#102#140#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/cart/cart_item.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="71" column="79" selection-start-line="71" selection-start-column="79" selection-end-line="71" selection-end-column="79" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/common/header.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/cart/header_cart.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="68" column="2" lean-forward="true" selection-start-line="68" selection-start-column="2" selection-end-line="74" selection-end-column="3" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/cart/cart_container.tsx">
+        <entry file="file://$PROJECT_DIR$/Procfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="44" column="48" selection-start-line="44" selection-start-column="48" selection-end-line="44" selection-end-column="48" />
-              <folding>
-                <element signature="e#102#140#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="28" selection-start-column="28" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/cart/actions.ts">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/cart/reducers.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="53" column="14" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#106#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/cart/types.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scss/components/_cart.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="50" column="24" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
-              <folding>
-                <element signature="e#42#127#0" />
-                <element signature="e#147#414#0" />
-                <element signature="e#1236#1542#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/cart/cart_list.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="25" column="58" lean-forward="true" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="102">
+              <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -208,7 +96,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/paths.js" />
         <option value="$PROJECT_DIR$/scripts/startdev.js" />
         <option value="$PROJECT_DIR$/src/scss/components/_pizza-block.scss" />
         <option value="$PROJECT_DIR$/src/components/product_sort/product_sort_item.tsx" />
@@ -259,6 +146,7 @@
         <option value="$PROJECT_DIR$/src/store/cart/reducers.ts" />
         <option value="$PROJECT_DIR$/src/store/cart/actions.ts" />
         <option value="$PROJECT_DIR$/src/components/cart/cart_container.tsx" />
+        <option value="$PROJECT_DIR$/Procfile" />
       </list>
     </option>
   </component>
@@ -283,82 +171,6 @@
             <path>
               <item name="pizza-client" type="b2602c69:ProjectViewProjectNode" />
               <item name="pizza-client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pizza-client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pizza-client" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pizza-client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pizza-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pizza-client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pizza-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pizza-client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pizza-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="cart" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pizza-client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pizza-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pizza-client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pizza-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="products" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pizza-client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pizza-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pizza-client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pizza-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pizza-client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pizza-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pizza-client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pizza-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="cart" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pizza-client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pizza-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pizza-client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pizza-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -462,7 +274,7 @@
       <workItem from="1592981813250" duration="1014000" />
       <workItem from="1592984546162" duration="9315000" />
       <workItem from="1593062362546" duration="20602000" />
-      <workItem from="1593157807077" duration="18117000" />
+      <workItem from="1593157807077" duration="19059000" />
     </task>
     <task id="LOCAL-00001" summary="updated structure of project">
       <created>1592726396431</created>
@@ -555,11 +367,18 @@
       <option name="project" value="LOCAL" />
       <updated>1593187146865</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="cart">
+      <created>1593191911681</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1593191911681</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76974000" />
+    <option name="totallyTimeSpent" value="77916000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -593,12 +412,12 @@
     <MESSAGE value="category sort" />
     <MESSAGE value="product sort and categories. added click on button" />
     <MESSAGE value="webpack" />
-    <MESSAGE value="cart" />
     <MESSAGE value="language" />
     <MESSAGE value="get products from api" />
     <MESSAGE value="added redux saga" />
     <MESSAGE value="currency" />
-    <option name="LAST_COMMIT_MESSAGE" value="currency" />
+    <MESSAGE value="cart" />
+    <option name="LAST_COMMIT_MESSAGE" value="cart" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -613,9 +432,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/assets/img/plus.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/img/empty-cart.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -705,13 +521,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -984,7 +793,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/cart/cart_list.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
-          <caret line="25" column="58" lean-forward="true" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
+          <caret line="25" column="58" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -1006,7 +815,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/cart/header_cart.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="68" column="2" lean-forward="true" selection-start-line="68" selection-start-column="2" selection-end-line="74" selection-end-column="3" />
+          <caret line="68" column="2" selection-start-line="68" selection-start-column="2" selection-end-line="74" selection-end-column="3" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -1040,10 +849,24 @@
     <entry file="file://$PROJECT_DIR$/src/components/cart/cart_container.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
-          <caret line="44" column="48" selection-start-line="44" selection-start-column="48" selection-end-line="44" selection-end-column="48" />
+          <caret line="95" column="16" selection-start-line="95" selection-start-column="16" selection-end-line="95" selection-end-column="16" />
           <folding>
             <element signature="e#102#140#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
         </state>
       </provider>
     </entry>
