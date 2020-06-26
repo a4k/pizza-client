@@ -1,18 +1,31 @@
-import { CategoriesState, SEND_CATEGORY, CategoriesActionTypes } from './types';
+import {
+  CATEGORY_FETCH_ERROR,
+  CATEGORY_FETCH_REQUEST,
+  CATEGORY_FETCH_SUCCESS,
+  CategoriesState,
+  CategoryActionTypes,
+} from './types';
 
 const initialState: CategoriesState = {
-  items: [{ id: 0, title: 'All' }, { id: 1, title: 'Meat' }, { id: 2, title: 'Vegetarian' }],
+  data: [],
+  loading: false,
+  errors: undefined,
 };
 
 export function categoryReducer(
   state = initialState,
-  action: CategoriesActionTypes
+  action: CategoryActionTypes
 ): CategoriesState {
   switch (action.type) {
-    case SEND_CATEGORY:
-      return {
-        items: [...state.items, action.payload],
-      };
+    case CATEGORY_FETCH_REQUEST: {
+      return { ...state, loading: true };
+    }
+    case CATEGORY_FETCH_SUCCESS: {
+      return { ...state, loading: false, data: action.payload };
+    }
+    case CATEGORY_FETCH_ERROR: {
+      return { ...state, loading: false, errors: action.payload };
+    }
     default:
       return state;
   }

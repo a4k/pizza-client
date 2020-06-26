@@ -6,8 +6,15 @@ export interface ProductSize {
   image?: string;
 }
 
+export interface ProductCategory {
+  id: number;
+  title: string;
+  code: string;
+}
+
 export interface Product {
   id: number;
+  category: ProductCategory;
   title: string;
   description: string;
   size: ProductSize[];

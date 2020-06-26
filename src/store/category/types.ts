@@ -1,17 +1,32 @@
 export interface Category {
   id: number;
   title: string;
+  code: string;
 }
 
 export interface CategoriesState {
-  items: Category[];
+  data: Category[];
+  loading: boolean;
+  errors?: string;
 }
 
-export const SEND_CATEGORY = 'SEND_CATEGORY';
+export const CATEGORY_FETCH_REQUEST = 'CATEGORY_FETCH_REQUEST';
+export const CATEGORY_FETCH_SUCCESS = 'CATEGORY_FETCH_SUCCESS';
+export const CATEGORY_FETCH_ERROR = 'CATEGORY_FETCH_ERROR';
 
-interface SendCategoryAction {
-  type: typeof SEND_CATEGORY;
-  payload: Category;
+interface CategoryFetchRequestAction {
+  type: typeof CATEGORY_FETCH_REQUEST;
+}
+interface CategoryFetchSuccessAction {
+  type: typeof CATEGORY_FETCH_SUCCESS;
+  payload: Category[];
+}
+interface CategoryFetchErrorAction {
+  type: typeof CATEGORY_FETCH_ERROR;
+  payload: string;
 }
 
-export type CategoriesActionTypes = SendCategoryAction;
+export type CategoryActionTypes =
+  | CategoryFetchRequestAction
+  | CategoryFetchSuccessAction
+  | CategoryFetchErrorAction;

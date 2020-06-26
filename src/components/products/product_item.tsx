@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import { Product } from '../../store/product/types';
 import { CartProduct } from '../../store/cart/types';
-import {getImageUrl} from "../../utils/image";
+import { getImageUrl } from '../../utils/image';
 
 interface ProductItemProps {
+  activeCategory: string;
   item: Product;
   cart: CartProduct[];
   addToCart: (product: number, size: number) => void;
 }
 
 const ProductItem: React.FunctionComponent<ProductItemProps> = ({
+  activeCategory,
   item,
   cart,
   addToCart,
@@ -23,6 +25,9 @@ const ProductItem: React.FunctionComponent<ProductItemProps> = ({
   );
   if (activeCartItem) {
     countOfProduct = activeCartItem.quantity;
+  }
+  if (activeCategory !== 'all' && activeCategory !== item.category.code) {
+    return <></>;
   }
 
   return (

@@ -10,6 +10,7 @@ import { ProductSortState } from './product_sort/types';
 import productSaga from './product/sagas';
 import { productReducer } from './product/reducers';
 import { ProductState } from './product/types';
+import categorySaga from './category/sagas';
 import { categoryReducer } from './category/reducers';
 import { CategoriesState } from './category/types';
 import { cartReducer } from './cart/reducers';
@@ -35,5 +36,5 @@ export const createRootReducer = (history: History) =>
   });
 
 export function* rootSaga() {
-  yield all([fork(productSaga)]);
+  yield all([fork(productSaga), fork(categorySaga)]);
 }

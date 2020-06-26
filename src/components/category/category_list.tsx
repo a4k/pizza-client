@@ -4,8 +4,8 @@ import CategoryItem from './category_item';
 
 interface CategoryListProps {
   items: Category[];
-  selectCategory: (categoryId: number) => void;
-  activeCategory: number;
+  selectCategory: (categoryCode: string) => void;
+  activeCategory: string;
 }
 
 const CategoryList: React.FunctionComponent<CategoryListProps> = ({

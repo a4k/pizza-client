@@ -3,7 +3,6 @@ import React from 'react';
 // @ts-ignore
 import { connect } from 'react-redux';
 import { ProductSortState } from '../../store/product_sort/types';
-import { sendCategory } from '../../store/category/actions';
 import { CategoriesState } from '../../store/category/types';
 import { AppState } from '../../store';
 import CategoryList from '../category/category_list';
@@ -13,10 +12,11 @@ import { ProductState } from '../../store/product/types';
 import { CartState } from '../../store/cart/types';
 import { addToCart } from '../../store/cart/actions';
 import { fetchProductRequest } from '../../store/product/actions';
+import { fetchCategoryRequest } from '../../store/category/actions';
 
 interface ProductsContainerProps {
   fetchProductRequest: typeof fetchProductRequest;
-  sendCategory: typeof sendCategory;
+  fetchCategoryRequest: typeof fetchCategoryRequest;
   category: CategoriesState;
   productSort: ProductSortState;
   product: ProductState;
@@ -26,17 +26,18 @@ interface ProductsContainerProps {
 
 class ProductsContainer extends React.Component<ProductsContainerProps> {
   state = {
-    activeCategory: 0,
+    activeCategory: 'all',
     activeSort: 'popularity',
   };
 
   componentDidMount = (): void => {
-    const { fetchProductRequest } = this.props;
+    const { fetchProductRequest, fetchCategoryRequest } = this.props;
+    fetchCategoryRequest();
     fetchProductRequest();
   };
 
-  selectCategory = (categoryId: number): void => {
-    this.setState({ activeCategory: categoryId });
+  selectCategory = (categoryCode: string): void => {
+    this.setState({ activeCategory: categoryCode });
   };
 
   selectSort = (sortKey: string): void => {
@@ -51,7 +52,7 @@ class ProductsContainer extends React.Component<ProductsContainerProps> {
         <div className="content__top">
           <CategoryList
             activeCategory={state.activeCategory}
-            items={props.category.items}
+            items={props.category.data}
             selectCategory={this.selectCategory}
           />
           <ProductSortList
@@ -61,7 +62,9 @@ class ProductsContainer extends React.Component<ProductsContainerProps> {
           />
         </div>
         <ProductList
+          activeSort={state.activeSort}
           items={props.product.data}
+          activeCategory={state.activeCategory}
           cart={props.cart.items}
           addToCart={props.addToCart}
         />
@@ -83,6 +86,7 @@ export default connect(
   mapStateToProps,
   {
     fetchProductRequest,
+    fetchCategoryRequest,
     addToCart,
   }
 )(ProductsContainer);
