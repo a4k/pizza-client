@@ -18,7 +18,10 @@ const HeaderCart: React.FunctionComponent<HeaderCartProps> = ({
     <div className="header__cart">
       <Link to="/cart">
         <Button className="button--cart">
-          <span>{currency}{totalPrice}</span>
+          <span>
+            {currency}
+            {totalPrice}
+          </span>
           <div className="button__delimiter" />
           <svg
             width="18"
@@ -60,7 +63,7 @@ const mapStateToProps = (state: AppState) => {
   let totalPrice = 0;
   let quantity = 0;
   state.cart.items.forEach(item => {
-    const productItem = state.product.items.find(
+    const productItem = state.product.data.find(
       productItem => productItem.id === item.product
     );
     if (productItem) {

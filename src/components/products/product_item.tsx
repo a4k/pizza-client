@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Product } from '../../store/product/types';
 import { CartProduct } from '../../store/cart/types';
+import {getImageUrl} from "../../utils/image";
 
 interface ProductItemProps {
   item: Product;
@@ -26,7 +27,11 @@ const ProductItem: React.FunctionComponent<ProductItemProps> = ({
 
   return (
     <div className="pizza-block">
-      <img className="pizza-block__image" src={activeSize.image} alt="Pizza" />
+      <img
+        className="pizza-block__image"
+        src={getImageUrl(activeSize.image ? activeSize.image : '')}
+        alt="Pizza"
+      />
       <h4 className="pizza-block__title">{item.title}</h4>
       <div className="pizza-block__description">{item.description}</div>
       <div className="pizza-block__selector">

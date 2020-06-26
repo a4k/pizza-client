@@ -1,6 +1,7 @@
 import React from 'react';
 import { CartItemModel } from '../../store/cart/types';
 import { Button } from '../common/button';
+import { getImageUrl } from '../../utils/image';
 
 interface CartItemProps {
   item: CartItemModel;
@@ -20,10 +21,15 @@ const CartItem: React.FunctionComponent<CartItemProps> = ({
     sizeItem => sizeItem.id === item.cart.size
   );
   const productPrice = productSize ? productSize.price : 0;
+  const productImage = productSize
+    ? productSize.image
+      ? productSize.image
+      : ''
+    : '';
   return (
     <div className="cart__item">
       <div className="cart__item-img">
-        <img src={productSize ? productSize.image : ''} alt="" />
+        <img src={getImageUrl(productImage)} alt="" />
       </div>
       <div className="cart__item-info">
         <h3>{item.product.title}</h3>

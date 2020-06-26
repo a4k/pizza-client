@@ -79,7 +79,7 @@ const mapStateToProps = (state: AppState) => {
   let quantity = 0;
   let totalPrice = 0;
   state.cart.items.forEach(item => {
-    const product = state.product.items.find(
+    const product = state.product.data.find(
       productItem => item.product === productItem.id
     );
     if (product) {

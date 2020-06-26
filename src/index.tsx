@@ -2,19 +2,23 @@ import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import React from 'react';
 import ReactDOM from 'react-dom';
-// eslint-disable-next-line @typescript-eslint/ban-ts-ignore
-// @ts-ignore
+import { ConnectedRouter } from 'connected-react-router';
 import { Provider } from 'react-redux';
-import configureStore from './store';
+import { createBrowserHistory } from 'history';
+import configureStore from './configure_store';
 
-import './scss/app.scss';
 import App from './components/app';
+import './scss/app.scss';
 
-const store = configureStore();
+const history = createBrowserHistory();
+const initialState = window.INITIAL_REDUX_STATE;
+const store = configureStore(history, initialState);
 
 const Root = () => (
   <Provider store={store}>
-    <App />
+    <ConnectedRouter history={history}>
+      <App />
+    </ConnectedRouter>
   </Provider>
 );
 

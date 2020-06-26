@@ -12,8 +12,10 @@ import ProductList from './product_list';
 import { ProductState } from '../../store/product/types';
 import { CartState } from '../../store/cart/types';
 import { addToCart } from '../../store/cart/actions';
+import { fetchProductRequest } from '../../store/product/actions';
 
 interface ProductsContainerProps {
+  fetchProductRequest: typeof fetchProductRequest;
   sendCategory: typeof sendCategory;
   category: CategoriesState;
   productSort: ProductSortState;
@@ -28,11 +30,16 @@ class ProductsContainer extends React.Component<ProductsContainerProps> {
     activeSort: 'popularity',
   };
 
-  selectCategory = (categoryId: number) => {
+  componentDidMount = (): void => {
+    const { fetchProductRequest } = this.props;
+    fetchProductRequest();
+  };
+
+  selectCategory = (categoryId: number): void => {
     this.setState({ activeCategory: categoryId });
   };
 
-  selectSort = (sortKey: string) => {
+  selectSort = (sortKey: string): void => {
     this.setState({ activeSort: sortKey });
   };
 
@@ -54,7 +61,7 @@ class ProductsContainer extends React.Component<ProductsContainerProps> {
           />
         </div>
         <ProductList
-          items={props.product.items}
+          items={props.product.data}
           cart={props.cart.items}
           addToCart={props.addToCart}
         />
@@ -75,7 +82,7 @@ const mapStateToProps = (state: AppState) => {
 export default connect(
   mapStateToProps,
   {
-    sendCategory,
+    fetchProductRequest,
     addToCart,
   }
 )(ProductsContainer);

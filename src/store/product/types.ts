@@ -14,19 +14,28 @@ export interface Product {
 }
 
 export interface ProductState {
-  items: Product[];
+  data: Product[];
+  loading: boolean;
+  errors?: string;
 }
 
-export const SEND_PRODUCT = 'SEND_PRODUCT';
-export const RECEIVE_PRODUCTS = 'RECEIVE_PRODUCTS';
+export const PRODUCT_FETCH_REQUEST = 'PRODUCT_FETCH_REQUEST';
+export const PRODUCT_FETCH_SUCCESS = 'PRODUCT_FETCH_SUCCESS';
+export const PRODUCT_FETCH_ERROR = 'PRODUCT_FETCH_ERROR';
 
-interface SendProductAction {
-  type: typeof SEND_PRODUCT;
-  payload: Product;
+interface ProductFetchRequestAction {
+  type: typeof PRODUCT_FETCH_REQUEST;
 }
-interface ReceiveProductsAction {
-  type: typeof RECEIVE_PRODUCTS;
-  products: Product[];
+interface ProductFetchSuccessAction {
+  type: typeof PRODUCT_FETCH_SUCCESS;
+  payload: Product[];
+}
+interface ProductFetchErrorAction {
+  type: typeof PRODUCT_FETCH_ERROR;
+  payload: string;
 }
 
-export type ProductActionTypes = SendProductAction | ReceiveProductsAction;
+export type ProductActionTypes =
+  | ProductFetchRequestAction
+  | ProductFetchSuccessAction
+  | ProductFetchErrorAction;

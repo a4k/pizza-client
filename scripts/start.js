@@ -1,4 +1,5 @@
 process.env.NODE_ENV = 'development';
+process.env.API_URL = 'http://localhost:1337';
 
 const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
